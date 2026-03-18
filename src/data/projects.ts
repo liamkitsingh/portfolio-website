@@ -14,10 +14,10 @@ export const projects: Project[] = [
   {
     title: 'Beacon',
     description: "Beacon is an AI-powered web application designed to provide critical support and resource navigation for individuals experiencing homelessness. Developed during the GenAI Genesis hackathon in March 2026, the project leverages generative AI to bridge the gap between vulnerable populations and the essential services they need.",
-    longDescription: "Beacon is an AI-powered web application designed to provide critical support and resource navigation for individuals experiencing homelessness. Developed during the GenAI Genesis hackathon in March 2026, the project leverages generative AI to bridge the gap between vulnerable populations and the essential services they need. The platform features a conversational AI assistant that provides real-time information on nearby shelters, food banks, and healthcare services. It also includes a dashboard for resource centers to manage and update their listings. The project was built with a mobile-first approach to ensure accessibility for users on the go.",
+    longDescription: "Beacon is an AI-powered web application designed to provide critical support and resource navigation for individuals experiencing various crises and lack of basic human needs. Developed during the GenAI Genesis hackathon in March 2026, the project leverages generative AI to bridge the gap between vulnerable populations and the essential services they need. The platform features a conversational AI assistant that provides real-time information on nearby shelters, food banks, and healthcare services. It also includes a dashboard for resource centers to manage and update their listings. The project was built with a mobile-first approach to ensure accessibility for users on the go.",
     technologies: ['Typescript','React','LangChain','Git'],
     imgUrl: "/images/beacon/beacon_icon.png",
-    projectUrl: '#',
+    projectUrl: 'https://github.com/raihanCarder/genaigenesis2026',
     codeUrl: '#',
     screenshots: [
       "/images/beacon/home.jpg",
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     longDescription: "A multiplayer server built for the classic game of Battleship. The project allows users to register on the server and send pre-formatted commands to bomb specified locations on an opponent's grid in order to win the game. The server is built in C and uses epoll for efficient handling of multiple client connections. The game logic is implemented on the server-side, and clients can connect to the server using a simple terminal-based interface.",
     technologies: ['C', 'Epoll', 'Sockets'],
     imgUrl: "/images/battleship/Gameplay_1.png",
-    projectUrl: '#',
+    projectUrl: 'https://github.com/liamkitsingh/battleship',
     codeUrl: '#',
     screenshots: [
       '/images/battleship/Gameplay_1.png',
@@ -75,9 +75,9 @@ export const projects: Project[] = [
     title: 'SMART-AIR',
     description: "An asthma tracking app built for Android. Designed for use by children, the app allows parents to monitor their child's medicine intake and emergencies.",
     longDescription: "An asthma tracking app built for Android. Designed for use by children, the app allows parents to monitor their child's medicine intake and emergencies. The app allows users to log their asthma symptoms, triggers, and medication use. It also provides a customizable emergency action plan. The data is stored locally on the device and can be exported as a PDF to be shared with healthcare providers.",
-    technologies: ['Java', 'Android', 'Firebase'],
+    technologies: ['Java', 'Android', 'Firebase', 'Git'],
     imgUrl: "/images/smart_air/dashboard.png",
-    projectUrl: '#',
+    projectUrl: 'https://github.com/finn-abel/CSCB07_Final_Project_SMARTAIR',
     codeUrl: '#',
     screenshots: [
       "/images/smart_air/dashboard.png",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     longDescription: 'A content-based movie recommendation system, built after cleaning and transforming a kaggle dataset, and implementing a vector-space model to provide users with recommendations. The system uses natural language processing to extract features from movie descriptions and then uses a cosine similarity metric to find similar movies. The recommendations are served through a REST API built with FastAPI.',
     technologies: ['Python', 'FastAPI', 'Pandas', 'scikit-learn', 'React'],
     imgUrl: "/images/moviemind/Nolan.png",
-    projectUrl: '#',
+    projectUrl: 'https://github.com/liamkitsingh/MovieMind',
     codeUrl: '#',
     screenshots: [
       '/images/moviemind/blank.png',

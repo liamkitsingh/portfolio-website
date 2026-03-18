@@ -1,0 +1,43 @@
+.skill-badge-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 12px; /* Gap from badge */
+  background-color: var(--space-charcoal);
+  border: 1px solid var(--hearth-orange);
+  color: var(--text-monospace);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  width: max-content;
+  max-width: 300px;
+  text-align: center;
+  z-index: 1060; /* Higher than other elements */
+  
+  /* Initially hidden */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.skill-badge-wrapper:hover .custom-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Arrow */
+.custom-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--hearth-orange) transparent transparent transparent;
+}

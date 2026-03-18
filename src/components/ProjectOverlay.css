@@ -1,0 +1,204 @@
+.project-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 12, 16, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.project-card {
+  position: relative;
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  width: 90vw;
+  max-width: 1200px;
+  height: 90vh;
+  border: 1px solid var(--border-analog);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 40px rgba(242, 135, 5, 0.3);
+  animation: slideIn 0.4s ease-out;
+  color: var(--text-monospace);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.project-details {
+  padding: 1rem 2rem 2rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.project-card h2 {
+  color: var(--hearth-orange);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--amber-glow);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project-card .technologies {
+  margin-bottom: 1rem;
+}
+
+.project-card .technologies strong {
+  color: var(--amber-glow);
+  font-family: 'Cinzel', serif;
+}
+
+.project-card .technologies ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.project-card .technologies li {
+  background-color: rgba(242, 135, 5, 0.1);
+  border: 1px solid var(--hearth-orange);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.project-card .btn-primary {
+  margin-top: 1rem;
+}
+
+.btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text-monospace);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 20; 
+}
+
+.btn-close:hover, .btn-close:focus {
+  color: var(--space-charcoal);
+  background-color: var(--hearth-orange);
+  box-shadow: 0 0 15px var(--amber-glow);
+  outline: none;
+}
+
+/* New Cinema View Styles */
+.image-viewer {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px; /* Fixed height for the main image area */
+}
+
+.main-image {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  object-fit: contain; /* Prevents cropping */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.nav-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-arrow.left {
+  left: 10px;
+}
+
+.nav-arrow.right {
+  right: 10px;
+}
+
+.thumbnail-strip {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  background-color: #111;
+  border-top: 1px solid var(--border-analog);
+}
+
+.thumbnail {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  margin-right: 10px;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.thumbnail.active {
+  border-color: var(--hearth-orange);
+  opacity: 1;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  text-align: center;
+  padding: 20px 10px 10px;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  pointer-events: none;
+}

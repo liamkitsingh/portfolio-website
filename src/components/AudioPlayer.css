@@ -1,0 +1,35 @@
+.audio-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .player-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .control-button {
+    background: transparent;
+    border: 1px solid var(--border-analog);
+    color: var(--text-monospace);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .control-button:hover {
+    background: var(--hearth-orange);
+    color: var(--space-charcoal);
+  }
+  
+  .expanded-controls {
+    display: none;
+    margin-left: 10px;
+  }
+  
+  .audio-player:hover .expanded-controls {
+    display: block;
+  }
+  

@@ -1,0 +1,113 @@
+export interface Project {
+  title: string;
+  description: string;
+  longDescription: string;
+  technologies: string[];
+  imgUrl: string;
+  projectUrl: string;
+  codeUrl: string;
+  screenshots: string[];
+  contributions: string[];
+}
+
+export const projects: Project[] = [
+  {
+    title: 'Beacon',
+    description: "Beacon is an AI-powered web application designed to provide critical support and resource navigation for individuals experiencing homelessness. Developed during the GenAI Genesis hackathon in March 2026, the project leverages generative AI to bridge the gap between vulnerable populations and the essential services they need.",
+    longDescription: "Beacon is an AI-powered web application designed to provide critical support and resource navigation for individuals experiencing homelessness. Developed during the GenAI Genesis hackathon in March 2026, the project leverages generative AI to bridge the gap between vulnerable populations and the essential services they need. The platform features a conversational AI assistant that provides real-time information on nearby shelters, food banks, and healthcare services. It also includes a dashboard for resource centers to manage and update their listings. The project was built with a mobile-first approach to ensure accessibility for users on the go.",
+    technologies: ['Typescript','React','LangChain','Git'],
+    imgUrl: "/images/beacon/beacon_icon.png",
+    projectUrl: '#',
+    codeUrl: '#',
+    screenshots: [
+      "/images/beacon/home.jpg",
+      "/images/beacon/dashboard.jpg",
+      "/images/beacon/chatbot.jpg",
+      "/images/beacon/saved.jpg",
+      "/images/beacon/roadmap.jpg"
+    ],
+    contributions: [
+      "Architected the Agentic logic using LangChain for real-time survival decision-making.",
+      "Developed the responsive frontend dashboard using React and Tailwind CSS.",
+      "Integrated Google Maps API for live geolocation tracking of emergency resources."
+    ]
+  },
+  {
+    title: 'Battleship',
+    description: " A multiplayer server built for the classic game of Battleship. The project allows users to register on the server and send pre-formatted commands to bomb specified locations on an opponent's grid in order to win the game.",
+    longDescription: "A multiplayer server built for the classic game of Battleship. The project allows users to register on the server and send pre-formatted commands to bomb specified locations on an opponent's grid in order to win the game. The server is built in C and uses epoll for efficient handling of multiple client connections. The game logic is implemented on the server-side, and clients can connect to the server using a simple terminal-based interface.",
+    technologies: ['C', 'Epoll', 'Sockets'],
+    imgUrl: "/images/battleship/Gameplay_1.png",
+    projectUrl: '#',
+    codeUrl: '#',
+    screenshots: [
+      '/images/battleship/Gameplay_1.png',
+      '/images/battleship/Gameplay_2.png', 
+      '/images/battleship/Gameplay_3.png'
+    ],
+    contributions: [
+      "Implemented the server-side game logic in C.",
+      "Used epoll for handling concurrent client connections.",
+      "Designed the communication protocol between the client and server."
+    ]
+  },
+  {
+    title: 'noted.',
+    description: 'A secure desktop notes application built with Python. It features a modern, sleek graphical user interface (GUI) and allows users to create, view, edit, and delete (CRUD) note entries. To ensure security, it employs full database encryption—requiring a user-specified decryption key to unlock and access notes, with the key never being stored on file. The app also includes a searchable entry table for easy note lookup.',
+    longDescription: 'A secure desktop notes application built with Python. It features a modern, sleek graphical user interface (GUI) and allows users to create, view, edit, and delete (CRUD) note entries. To ensure security, it employs full database encryption—requiring a user-specified decryption key to unlock and access notes, with the key never being stored on file. The app also includes a searchable entry table for easy note lookup. The GUI is built using Tkinter, and the database is encrypted using the Fernet symmetric encryption algorithm.',
+    technologies: ['Python', 'Tkinter', 'SQL'],
+    imgUrl:"/images/noted/dashboard.png",
+    projectUrl: 'https://github.com/liamkitsingh/noted',
+    codeUrl: '#',
+    screenshots: [
+      '/images/noted/dashboard.png',
+      '/images/noted/create_entry.png', 
+      '/images/noted/edit_entry.png', 
+      '/images/noted/view_entries.png'
+    ],
+    contributions: [
+      "Designed and implemented the GUI using Tkinter.",
+      "Implemented the database encryption using Fernet.",
+      "Developed the search functionality for the notes."
+    ]
+  },
+  {
+    title: 'SMART-AIR',
+    description: "An asthma tracking app built for Android. Designed for use by children, the app allows parents to monitor their child's medicine intake and emergencies.",
+    longDescription: "An asthma tracking app built for Android. Designed for use by children, the app allows parents to monitor their child's medicine intake and emergencies. The app allows users to log their asthma symptoms, triggers, and medication use. It also provides a customizable emergency action plan. The data is stored locally on the device and can be exported as a PDF to be shared with healthcare providers.",
+    technologies: ['Java', 'Android', 'Firebase'],
+    imgUrl: "/images/smart_air/dashboard.png",
+    projectUrl: '#',
+    codeUrl: '#',
+    screenshots: [
+      "/images/smart_air/dashboard.png",
+      "/images/smart_air/triage.png",
+      "/images/smart_air/pef_entry.png"
+    ],
+    contributions: [
+      "Developed the user interface for the Android app.",
+      "Implemented the local data storage using SQLite.",
+      "Created the PDF export functionality."
+    ]
+  },
+  {
+    title: 'MovieMind',
+    description: 'A content-based movie recommendation system, built after cleaning and transforming a kaggle dataset, and implementing a vector-space model to provide users with recommendations',
+    longDescription: 'A content-based movie recommendation system, built after cleaning and transforming a kaggle dataset, and implementing a vector-space model to provide users with recommendations. The system uses natural language processing to extract features from movie descriptions and then uses a cosine similarity metric to find similar movies. The recommendations are served through a REST API built with FastAPI.',
+    technologies: ['Python', 'FastAPI', 'Pandas', 'scikit-learn', 'React'],
+    imgUrl: "/images/moviemind/Nolan.png",
+    projectUrl: '#',
+    codeUrl: '#',
+    screenshots: [
+      '/images/moviemind/blank.png',
+      '/images/moviemind/Nolan.png', 
+      '/images/moviemind/greek.png',
+      '/images/moviemind/Chalamet.png'
+    ],
+    contributions: [
+      "Cleaned and transformed the Kaggle dataset.",
+      "Implemented the vector-space model for movie recommendations.",
+      "Developed the REST API using FastAPI."
+    ]
+  },
+];

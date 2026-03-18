@@ -1,0 +1,153 @@
+#projects {
+  height: 100vh; /* Keeps it full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 800px; /* Increase this value to your liking */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0; /* Add internal padding so the scale has a 'buffer' */
+  overflow: visible;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  overflow-x: auto; 
+  overflow-y: visible; /* CRITICAL: This stops the top/bottom clipping */
+  padding-top: 50px; /* Buffer for the 1.1x scale */
+  padding-bottom: 50px;
+}
+
+.carousel-wrapper::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.carousel-track {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 50%; 
+  width: max-content; 
+}
+
+.carousel-card-wrapper {
+  scroll-snap-align: center;
+  flex: 0 0 300px; /* Keep this narrow for the slim look */
+  margin: 0 1.5rem; /* Space between the cards */
+  
+  /* Resetting the tilt */
+  opacity: 0.3;
+  transform: scale(0.8); /* Shrinks the side cards slightly */
+
+  height: 100%; /* Let it fill the new container height */
+  display: flex;
+  align-items: center;
+  
+  /* Clean transitions */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1;
+}
+
+.carousel-card-wrapper.active-card {
+  opacity: 1;
+  transform: scale(1.1); /* Makes the center card pop forward slightly */
+  z-index: 10;
+}
+
+.project-card-landscape {
+  display: flex;
+  flex-direction: column;
+  /* Fixed height is key for the 'slim' look */
+  height: 550px; 
+  width: 100%;
+  background-color: rgba(11, 12, 16, 0.9);
+  border: 1px solid var(--border-analog);
+  backdrop-filter: blur(8px);
+  color: var(--text-monospace);
+  overflow: hidden;
+  border-radius: 4px; /* Slight roundness looks more premium */
+}
+
+.project-card-landscape:hover {
+  border-color: var(--hearth-orange);
+}
+
+.project-card-landscape .card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Keeps button at the bottom */
+  height: 100%;
+}
+
+/* Ensure the description doesn't trail off or bloat the card */
+.project-card-landscape .card-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limits description to 4 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card-img {
+  width: 100%;
+  height: 160px; /* Shorter image makes more room for text */
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-analog);
+}
+
+.carousel-card-wrapper.highlight .project-card-landscape {
+  animation: pulse-light 1.5s ease-out;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--hearth-orange) !important;
+  color: var(--space-charcoal) !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  z-index: 20;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.carousel-btn:hover {
+  opacity: 1;
+}
+
+.carousel-btn.prev {
+  left: 20px;
+}
+
+.carousel-btn.next {
+  right: 20px;
+}
+
+@keyframes pulse-light {
+  0% {
+    box-shadow: 0 0 0 0 rgba(242, 135, 5, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(242, 135, 5, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(242, 135, 5, 0);
+  }
+}

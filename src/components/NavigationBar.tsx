@@ -74,7 +74,6 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ activeSection, onWarp }) 
   return (
     <Navbar expand="lg" fixed="top" className="app-navbar">
       <Container>
-        <Navbar.Brand href="#home">My Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">

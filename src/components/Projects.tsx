@@ -64,10 +64,15 @@ const Projects: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (carouselRef.current) {
-      const firstCard = carouselRef.current.children[0].children[0] as HTMLElement;
+    const carousel = carouselRef.current;
+    if (carousel) {
+      const firstCard = carousel.querySelector('.carousel-card-wrapper') as HTMLElement;
       if (firstCard) {
-        firstCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        const scrollAmount = firstCard.offsetLeft - (carousel.offsetWidth / 2) + (firstCard.offsetWidth / 2);
+        carousel.scrollTo({
+          left: scrollAmount,
+          behavior: 'auto' // Use 'auto' for an instant scroll on load
+        });
       }
     }
   }, []);
@@ -142,4 +147,3 @@ const Projects: React.FC = () => {
 };
 
 export default Projects;
-

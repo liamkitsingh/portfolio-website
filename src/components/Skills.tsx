@@ -5,7 +5,7 @@ import { skillCategories } from '../data/skills';
 import type { Skill } from '../data/skills';
 import './Skills.css';
 
-const SkillBadge: React.FC<{ skill: Skill, id: string, dimmed: boolean }> = ({ skill, id, dimmed }) => {
+const SkillBadge: React.FC<{ skill: Skill, id: string, dimmed: boolean, highlighted: boolean }> = ({ skill, id, dimmed, highlighted }) => {
   const { setHighlightedProject } = useSkills();
 
   const handleProjectClick = (projectName: string) => {
@@ -18,7 +18,7 @@ const SkillBadge: React.FC<{ skill: Skill, id: string, dimmed: boolean }> = ({ s
 
   return (
     <div className={`skill-badge-wrapper ${dimmed ? 'dimmed' : ''}`} id={id}>
-      <Badge className={`skill-badge m-2 ${!dimmed ? 'glow' : ''}`}>
+      <Badge className={`skill-badge m-2 ${highlighted ? 'glow' : ''}`}>
         {skill.name}
       </Badge>
       <div className="custom-tooltip">
@@ -77,14 +77,18 @@ const Skills: React.FC = () => {
             <h3 className="category-title">{category}</h3>
             <Row>
               <Col className="text-center">
-                {skills.map((skill) => (
-                  <SkillBadge
-                    key={skill.name}
-                    skill={skill}
-                    id={`skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
-                    dimmed={searchTerm !== '' && !filteredSkills.some(s => s.name === skill.name)}
-                  />
-                ))}
+                {skills.map((skill) => {
+                  const isDimmed = searchTerm !== '' && !filteredSkills.some(s => s.name === skill.name);
+                  return (
+                    <SkillBadge
+                      key={skill.name}
+                      skill={skill}
+                      id={`skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      dimmed={isDimmed}
+                      highlighted={searchTerm !== '' && !isDimmed}
+                    />
+                  );
+                })}
               </Col>
             </Row>
           </div>

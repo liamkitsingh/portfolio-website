@@ -33,10 +33,6 @@ html {
   position: relative;
 }
 
-section#home, section#about {
-  background-color: #0d0d0d;
-}
-
 body {
   background-color: var(--space-charcoal);
   background-image: 
@@ -270,4 +266,3 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--amber-glow);
   width: 40px; /* To align the names */
 }
-

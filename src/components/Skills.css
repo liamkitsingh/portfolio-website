@@ -1,7 +1,3 @@
-section#skills {
-  background-color: #0d0d0d;
-}
-
 .custom-tooltip {
   position: absolute;
   bottom: 100%;
@@ -22,6 +18,11 @@ section#skills {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.skill-badge-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
 .skill-badge-wrapper:hover .custom-tooltip {

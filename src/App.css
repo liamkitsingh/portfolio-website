@@ -24,6 +24,7 @@ html {
 .scroll-section {
   min-height: 100vh;
   width: 100%;
+  box-sizing: border-box;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
@@ -135,11 +136,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
   .scroll-section {
     padding: 80px 20px;
   }
   .search-input.open {
     width: 100%;
+  }
+
+  .app-navbar {
+    background-color: transparent !important;
+    backdrop-filter: none;
+  }
+
+  .navbar-toggler {
+    background-color: var(--space-charcoal) !important;
+    border-color: var(--hearth-orange) !important;
+    box-shadow: 0 0 10px rgba(242, 135, 5, 0.5) !important;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28242, 135, 5, 1%29' stroke-linecap='round' stroke-miterlimit='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    filter: drop-shadow(0 0 4px var(--hearth-orange));
   }
 }
 
@@ -264,5 +285,5 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.8rem;
   margin-right: 1rem;
   color: var(--amber-glow);
-  width: 40px; /* To align the names */
+  width: 40px; 
 }

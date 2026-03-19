@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
         const scrollAmount = firstCard.offsetLeft - (carousel.offsetWidth / 2) + (firstCard.offsetWidth / 2);
         carousel.scrollTo({
           left: scrollAmount,
-          behavior: 'auto' // Use 'auto' for an instant scroll on load
+          behavior: 'auto' 
         });
       }
     }

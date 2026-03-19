@@ -45,10 +45,10 @@ const About: React.FC = () => {
 
   return (
     <section id="about" className="py-5">
-      <Container fluid className="px-5"> {/* Fluid with padding gives it room to breathe */}
-        <Row className="align-items-center"> {/* Vertically centers everything */}
+      <Container fluid className="px-5"> 
+        <Row className="align-items-center">
           
-          {/* COLUMN 1: YOUR PHOTO */}
+          {/* COLUMN 1: MY PHOTO */}
           <Col lg={3} md={12} sm={12} className="text-center">
             <div className="profile-image-container">
               <img src="/images/headshot.png" alt="Liam Kitsingh" className="profile-image" />

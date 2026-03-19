@@ -54,7 +54,7 @@ const App: React.FC = () => {
       element.classList.add('glow-effect');
       setTimeout(() => {
         element.classList.remove('glow-effect');
-      }, 1000); // Match the animation duration
+      }, 1000); 
     }
   };
 
@@ -64,7 +64,6 @@ const App: React.FC = () => {
         activeSection={activeSection} 
         onWarp={handleWarp} 
       />
-      <AudioPlayer />
       <section id="home" className="scroll-section">
         <Home />
       </section>

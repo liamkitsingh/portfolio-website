@@ -1,7 +1,8 @@
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
+  min-width: 0; /* Crucial for preventing flexbox from expanding to fit content */
   height: 800px; /* Increase this value to your liking */
   display: flex;
   justify-content: center;
@@ -13,6 +14,7 @@
 .carousel-wrapper {
   width: 100%;
   max-width: 1200px;
+  min-width: 0; /* Ensures the scroll viewport can shrink and trigger the horizontal scrollbar */
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -149,7 +151,7 @@
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   .carousel-container {
-    height: 600px;
+    height: 650px; 
   }
 
   .carousel-card-wrapper {
@@ -159,4 +161,28 @@
   .project-card-landscape {
     height: 480px;
   }
+
+  .carousel-container::after {
+    content: "← Swipe to explore →";
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--hearth-orange);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    pointer-events: none;
+    animation: swipe-pulse 2s ease-in-out infinite;
+    z-index: 20;
+  }
+
+  .carousel-btn {
+    display: none !important; 
+  }
+}
+
+@keyframes swipe-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
 }

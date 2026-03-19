@@ -230,17 +230,14 @@
   }
 
   .project-details {
-    /* Reduce side padding on smaller screens */
     padding: 1rem 1rem 2rem; 
   }
 
   .image-viewer {
-    /* Prevent the image viewer from taking up the whole screen on mobile */
     height: 300px; 
   }
 
   .thumbnail {
-    /* Slightly shrink thumbnails so more fit on screen */
     width: 80px;
     height: 50px;
   }

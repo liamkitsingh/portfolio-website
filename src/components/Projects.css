@@ -1,8 +1,5 @@
 #projects {
-  height: 100vh; /* Keeps it full screen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: #0d0d0d;
 }
 
 .carousel-container {
@@ -151,3 +148,5 @@
     box-shadow: 0 0 0 0 rgba(242, 135, 5, 0);
   }
 }
+
+

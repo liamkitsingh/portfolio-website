@@ -51,8 +51,37 @@
 }
 
 .side-nav .nav-link {
+
   cursor: pointer;
+
   color: rgba(255, 255, 255, 0.6);
+
   font-family: var(--text-monospace);
+
   font-size: 0.9rem;
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .profile-image-container {
+
+    margin-bottom: 2rem;
+
+  }
+
+  .about-text-content {
+
+    margin-bottom: 2rem;
+
+  }
+
+  .side-nav {
+
+    align-items: center;
+
+  }
+
 }

@@ -49,14 +49,14 @@ const About: React.FC = () => {
         <Row className="align-items-center"> {/* Vertically centers everything */}
           
           {/* COLUMN 1: YOUR PHOTO */}
-          <Col lg={3} md={4} className="text-center">
+          <Col lg={3} md={12} sm={12} className="text-center">
             <div className="profile-image-container">
               <img src="/images/headshot.png" alt="Liam Kitsingh" className="profile-image" />
             </div>
           </Col>
           
           {/* COLUMN 2: THE CONTENT */}
-          <Col lg={6} md={4}>
+          <Col lg={6} md={12} sm={12}>
             <h2 className="about-content-title">
               {selection === 'about' ? 'About Me' : selection.toUpperCase()}
             </h2>
@@ -66,7 +66,7 @@ const About: React.FC = () => {
           </Col>
           
           {/* COLUMN 3: THE NAVIGATION */}
-          <Col lg={3} md={4} className="text-center text-md-start">
+          <Col lg={3} md={12} sm={12} className="text-center text-md-start">
             <h5 className="sidebar-title">More About Me</h5>
             <Nav className="flex-column side-nav">
               <Nav.Link onClick={() => setSelection('about')} className={selection === 'about' ? 'active' : ''}>General</Nav.Link>

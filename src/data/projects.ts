@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     title: 'Beacon',
     description: "Beacon is an AI-powered web application designed to provide critical support and resource navigation for individuals experiencing homelessness. Developed during the GenAI Genesis hackathon in March 2026, the project leverages generative AI to bridge the gap between vulnerable populations and the essential services they need.",
-    longDescription: "Beacon is an AI-powered web application designed to provide critical support and resource navigation for individuals experiencing various crises and lack of basic human needs. Developed during the GenAI Genesis hackathon in March 2026, the project leverages generative AI to bridge the gap between vulnerable populations and the essential services they need. The platform features a conversational AI assistant that provides real-time information on nearby shelters, food banks, and healthcare services. It also includes a dashboard for resource centers to manage and update their listings. The project was built with a mobile-first approach to ensure accessibility for users on the go.",
+    longDescription: "Beacon is an AI-powered web application designed to provide critical support and resource navigation for individuals experiencing various crises and lack of basic human needs. The platform's core feature is an intelligent conversational AI assistant that provides real-time, geo-located information on nearby shelters, food banks, and healthcare services. What sets Beacon apart is its AI-generated Survival Roadmap; leveraging LangChain, the agentic logic processes a user's unique situation and dynamically generates a personalized step-by-step guide to stabilization. This roadmap integrates real-time data from various service APIs to ensure the information is always current and relevant. Developed during the GenAI Genesis hackathon in March 2026, the project was built with a mobile-first approach to ensure accessibility for users on the go.",
     technologies: ['Typescript','React','LangChain','Git'],
     imgUrl: "/images/beacon/beacon_icon.png",
     projectUrl: 'https://github.com/raihanCarder/genaigenesis2026',
@@ -27,6 +27,7 @@ export const projects: Project[] = [
       "/images/beacon/roadmap.jpg"
     ],
     contributions: [
+      "AI-generated Survival Roadmap: Highlighted the AI-generated Survival Roadmap and LangChain logic as the primary contribution.",
       "Architected the Agentic logic using LangChain for real-time survival decision-making.",
       "Developed the responsive frontend dashboard using React and Tailwind CSS.",
       "Integrated Google Maps API for live geolocation tracking of emergency resources."

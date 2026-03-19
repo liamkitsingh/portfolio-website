@@ -1,3 +1,7 @@
+section#courses {
+  background-color: #0d0d0d;
+}
+
 .courses-container {
     width: 100%;
     max-width: 960px;
@@ -173,6 +177,34 @@
 .course-badge.in-progress .course-code-small,
 .course-badge.in-progress .course-title-main {
   color: #5bc0de;
+}
+
+@media (max-width: 768px) {
+  section#courses {
+    min-height: auto;
+    padding-bottom: 10vh;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .course-badge {
+    width: 100%;
+    height: auto; /* Let height be determined by content */
+    min-height: 100px; /* Keep a minimum height */
+    padding: 1rem;
+  }
+  .course-node {
+    margin: 0; /* Remove margin, gap will handle spacing */
+    width: 100%; /* Ensure node takes full width of grid cell */
+  }
+  .course-code-small {
+    font-size: 0.8rem;
+  }
+  .course-title-main {
+    font-size: 0.8rem;
+  }
 }
 
     

@@ -203,8 +203,32 @@
   pointer-events: none;
 }
 
+.contributions {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contributions h3 {
+  color: var(--hearth-orange);
+  font-family: 'Cinzel', serif;
+  margin-bottom: 0.5rem;
+}
+
+.contributions ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.contributions li {
+  margin-bottom: 0.5rem;
+}
+
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
+  .project-card {
+    width: 95vw;
+  }
+
   .project-details {
     /* Reduce side padding on smaller screens */
     padding: 1rem 1rem 2rem; 

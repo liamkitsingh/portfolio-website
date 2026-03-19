@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './ProjectOverlay.css';
 import type { Project } from '../data/projects';
 
@@ -9,6 +9,14 @@ interface ProjectOverlayProps {
 
 const ProjectOverlay: React.FC<ProjectOverlayProps> = ({ project, onClose }) => {
   const [activeImgIndex, setActiveImgIndex] = useState(0);
+
+  const nextImage = useCallback(() => {
+    setActiveImgIndex((prevIndex) => (prevIndex + 1) % project.screenshots.length);
+  }, [project.screenshots.length]);
+
+  const prevImage = useCallback(() => {
+    setActiveImgIndex((prevIndex) => (prevIndex - 1 + project.screenshots.length) % project.screenshots.length);
+  }, [project.screenshots.length]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -25,15 +33,7 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({ project, onClose }) => 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [project.screenshots, activeImgIndex]);
-
-  const nextImage = () => {
-    setActiveImgIndex((prevIndex) => (prevIndex + 1) % project.screenshots.length);
-  };
-
-  const prevImage = () => {
-    setActiveImgIndex((prevIndex) => (prevIndex - 1 + project.screenshots.length) % project.screenshots.length);
-  };
+  }, [nextImage, prevImage, onClose]);
 
   const getCaptionFromUrl = (url: string) => {
     const parts = url.split('/');
@@ -72,14 +72,19 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({ project, onClose }) => 
               ))}
             </ul>
           </div>
-          {project.projectUrl && (
-            <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary me-2">
-              View Project
-            </a>
+          {project.contributions && (
+            <div className="contributions">
+              <h3>My Contributions</h3>
+              <ul>
+                {project.contributions.map((contribution, index) => (
+                  <li key={index}>{contribution}</li>
+                ))}
+              </ul>
+            </div>
           )}
-          {project.codeUrl && (
-            <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-              View Code
+          {project.projectUrl && (
+            <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              View Repository
             </a>
           )}
         </div>

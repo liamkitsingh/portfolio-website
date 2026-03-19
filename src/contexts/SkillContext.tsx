@@ -1,6 +1,7 @@
 import React, { createContext, useState, useContext } from 'react';
+import type { ReactNode } from 'react';
 
-interface SkillContextType {
+export interface SkillContextType {
   activeSkill: string | null;
   setActiveSkill: (skill: string | null) => void;
   highlightedProject: string | null;
@@ -18,7 +19,7 @@ export const useSkills = () => {
 };
 
 interface SkillProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const SkillProvider: React.FC<SkillProviderProps> = ({ children }) => {

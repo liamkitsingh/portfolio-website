@@ -81,12 +81,23 @@
   .side-nav {
 
     align-items: center;
-
+    margin-bottom: 2rem;
   }
-  /* 
-   * Global fix: Disable vertical scroll snapping on mobile 
-   * so tall sections can be scrolled freely without violently snapping.
-   */
+  
+  .sidebar-title {
+    display: none;
+  }
+
+  /* Reorder columns on mobile: Profile Image -> Navigation Menu -> About Text */
+  .row:has(.side-nav) {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row:has(.side-nav) > *:has(.profile-image-container) { order: 1; }
+  .row:has(.side-nav) > *:has(.side-nav), .row:has(.side-nav) > *:has(.sidebar-title) { order: 2; }
+  .row:has(.side-nav) > *:has(.about-text-content), .row:has(.side-nav) > *:has(.about-content-title) { order: 3; }
+  
   html, body, #root, main, .App, .scroll-container, .main-container {
     scroll-snap-type: none !important;
   }

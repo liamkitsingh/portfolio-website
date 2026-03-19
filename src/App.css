@@ -146,6 +146,10 @@ h1, h2, h3, h4, h5, h6 {
   .search-input.open {
     width: 100%;
   }
+  
+  .search-container {
+    display: none !important;
+  }
 
   .app-navbar {
     background-color: transparent !important;

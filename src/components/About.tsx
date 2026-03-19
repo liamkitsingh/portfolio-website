@@ -69,7 +69,7 @@ const About: React.FC = () => {
           <Col lg={3} md={12} sm={12} className="text-center text-md-start">
             <h5 className="sidebar-title">More About Me</h5>
             <Nav className="flex-column side-nav">
-              <Nav.Link onClick={() => setSelection('about')} className={selection === 'about' ? 'active' : ''}>General</Nav.Link>
+              <Nav.Link onClick={() => setSelection('about')} className={selection === 'about' ? 'active' : ''}>About Me</Nav.Link>
               <Nav.Link onClick={() => setSelection('interests')} className={selection === 'interests' ? 'active' : ''}>Interests</Nav.Link>
               <Nav.Link onClick={() => setSelection('hobbies')} className={selection === 'hobbies' ? 'active' : ''}>Hobbies</Nav.Link>
             </Nav>

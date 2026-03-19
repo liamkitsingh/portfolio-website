@@ -6,7 +6,6 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Courses from './components/Courses';
 import Contact from './components/Contact';
-import AudioPlayer from './components/AudioPlayer';
 import PreviewCard from './components/PreviewCard';
 import { useSkills } from './contexts/SkillContext';
 import { projects } from './data/projects';

@@ -83,5 +83,15 @@
     align-items: center;
 
   }
-
+  /* 
+   * Global fix: Disable vertical scroll snapping on mobile 
+   * so tall sections can be scrolled freely without violently snapping.
+   */
+  html, body, #root, main, .App, .scroll-container, .main-container {
+    scroll-snap-type: none !important;
+  }
+  
+  section {
+    scroll-snap-align: none !important;
+  }
 }

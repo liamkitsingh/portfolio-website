@@ -27,10 +27,8 @@ export const projects: Project[] = [
       "/images/beacon/roadmap.jpg"
     ],
     contributions: [
-      "AI-generated Survival Roadmap: Highlighted the AI-generated Survival Roadmap and LangChain logic as the primary contribution.",
-      "Architected the Agentic logic using LangChain for real-time survival decision-making.",
-      "Developed the responsive frontend dashboard using React and Tailwind CSS.",
-      "Integrated Google Maps API for live geolocation tracking of emergency resources."
+      "Developed the web app's roadmap feature, providing a user with a comprehensive, step-by-step plan for escaping situations of crisis.",
+      "Utilized LangChain and Agentic AI to create an AI-powered workflow that analyzes the user's current situation, creating a profile which is then fed into a ReAct agent, that is capable of actively searching the web for resources and information to construct roadmap",
     ]
   },
   {
@@ -47,9 +45,7 @@ export const projects: Project[] = [
       '/images/battleship/Gameplay_3.png'
     ],
     contributions: [
-      "Implemented the server-side game logic in C.",
-      "Used epoll for handling concurrent client connections.",
-      "Designed the communication protocol between the client and server."
+      "This was a solo project, entirely completed by me."
     ]
   },
   {
@@ -67,9 +63,7 @@ export const projects: Project[] = [
       '/images/noted/view_entries.png'
     ],
     contributions: [
-      "Designed and implemented the GUI using Tkinter.",
-      "Implemented the database encryption using Fernet.",
-      "Developed the search functionality for the notes."
+      "This was a solo project, entirely completed by me"
     ]
   },
   {
@@ -86,9 +80,8 @@ export const projects: Project[] = [
       "/images/smart_air/pef_entry.png"
     ],
     contributions: [
-      "Developed the user interface for the Android app.",
-      "Implemented the local data storage using SQLite.",
-      "Created the PDF export functionality."
+      "Developed a triage feature that allows users to perform a quick check for symptoms and triggers, and utilizes a critical decision making system that determines whether to escalate the situation to emergency services, or provide at-home remedies.",
+      "Implemented a PEF entry feature",
     ]
   },
   {
@@ -106,9 +99,7 @@ export const projects: Project[] = [
       '/images/moviemind/Chalamet.png'
     ],
     contributions: [
-      "Cleaned and transformed the Kaggle dataset.",
-      "Implemented the vector-space model for movie recommendations.",
-      "Developed the REST API using FastAPI."
+      "This was a solo project, entirely completed by me"
     ]
   },
 ];

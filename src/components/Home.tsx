@@ -10,7 +10,7 @@ const Home: React.FC = () => {
         <p className="text-supporting">I'm a 3rd Year Computer Science Student at University of Toronto Scarborough</p>
         <p className="text-supporting">Welcome to my portfolio :)</p>
         <p>
-          <Button variant="primary" href="#about">Find out more about me</Button>
+          <Button variant="primary" href="#projects">View my projects</Button>
         </p>
       </Container>
     </section>

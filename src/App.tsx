@@ -66,9 +66,6 @@ const App: React.FC = () => {
       <section id="home" className="scroll-section">
         <Home />
       </section>
-      <section id="about" className="scroll-section">
-        <About />
-      </section>
       <section id="projects" className="scroll-section">
         <Projects />
       </section>
@@ -77,6 +74,9 @@ const App: React.FC = () => {
       </section>
       <section id="courses" className="scroll-section">
         <Courses />
+      </section>
+      <section id="about" className="scroll-section">
+        <About />
       </section>
       <section id="contact" className="scroll-section">
         <Contact />

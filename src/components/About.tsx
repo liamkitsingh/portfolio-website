@@ -9,10 +9,9 @@ const About: React.FC = () => {
     about: (
       <>
         <p>
-          Hailing from Trinidad and Tobago, I’m a Computer Science student at the University of Toronto Scarborough with a deep interest in how 
-          efficient code can solve real-world problems. Whether I’m architecting a full-stack application or 
-          experimenting with machine learning models, I’m driven by the challenge of making software that 
-          feels intuitive and impactful.
+          Hailing from the twin islands of Trinidad and Tobago, I’m a Co-op Computer Science student at the University of Toronto, specializing in Information Systems, with a deep interest in how 
+          efficient code can solve real-world problems. I consider myself a problem solver at heart, and want to utilize my skills and efforts to make useful, impactful projects that 
+          can make a real difference in the world.
         </p>
       </>
     ),
@@ -28,7 +27,7 @@ const About: React.FC = () => {
       <>
         <p>
           Studying Computer Science is stressful, just ask anyone in the field. That said, I think I do a pretty good job at managing it,  
-          with rock climbing being a cheat code. Nothing feels better than nailing a route that's been humbling you for so long.
+          with rock climbing being my personal cheat code. Nothing feels better than finally nailing a route after failing time after time again.
         </p>
         <p>
           That aside, I also try to connect with nature as much as I can. The valley trail at UTSC is perfect for long evening walks,

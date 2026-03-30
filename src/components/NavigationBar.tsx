@@ -78,10 +78,10 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ activeSection, onWarp }) 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link href="#home" active={activeSection === 'home'}>Home</Nav.Link>
-            <Nav.Link href="#about" active={activeSection === 'about'}>About</Nav.Link>
             <Nav.Link href="#projects" active={activeSection === 'projects'}>Projects</Nav.Link>
             <Nav.Link href="#skills" active={activeSection === 'skills'}>Skills</Nav.Link>
             <Nav.Link href="#courses" active={activeSection === 'courses'}>Courses</Nav.Link>
+            <Nav.Link href="#about" active={activeSection === 'about'}>About</Nav.Link>
             <Nav.Link href="#contact" active={activeSection === 'contact'}>Contact</Nav.Link>
             <div className="search-container">
               {!isSearchOpen && <FaSearch className="search-icon" onClick={handleSearchIconClick} />}

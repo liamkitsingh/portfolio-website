@@ -17,10 +17,10 @@ const About: React.FC = () => {
     ),
     interests: (
       <p>
-        Outside of coding and math, I really appreciate good fiction. I absolutely love watching movies, especially sci-fi and fantasy (PS: I'm really looking forward to Project Hail Mary and the Odyssey).
+        Outside of coding and math, I really appreciate good fiction. I absolutely love watching movies, especially sci-fi and fantasy (PS: Project Hail Mary was amazing, and I can't wait for The Odyssey and Dune Part Three).
         In fact, my love for cinema inspired me to make a movie recommendation engine (MovieMind)!
-        When I'm not watching cinema, you can find me reading a dark fantasy book (just started Malazan: Book of the Fallen!). I'm also a huge football/soccer fan,
-        for which Liverpool is my favorite team (YNWA :) ).
+        When I'm not watching cinema, you can find me reading a dark fantasy book (just started Malazan: Book of the Fallen). I'm also a huge football/soccer fan,
+        for which Liverpool is my favorite team (#YNWA).
       </p>
     ),
     hobbies: (
@@ -36,7 +36,7 @@ const About: React.FC = () => {
         <p>
           And lastly, what kind of CS student would I be if I didn't play some video games? Whether it's a MOBA, RPG or roguelike, I love a wide variety.
           I play a lot of online games such as Overwatch and League of Legends, but when I finally get time I like to pour hours into longer, story-driven games,
-          such as Outer Wilds (which inspired the aesthetic of this website !!!), Dragon Age, Fallout and The Legend of Zelda.
+          such as Outer Wilds (which actually inspired the aesthetic of this website!), Dragon Age, Fallout and The Legend of Zelda.
         </p>
       </>
     ),

@@ -23,7 +23,7 @@ export const courses: Course[] = [
   { code: 'CSCB36', title: 'Theory of Computation', summary: 'Formal languages, induction, and analysis of algorithm complexity.' },
 
   //Third Year
-  { code: 'CSCB63', title: 'Design and Analysis of Data Structures', summary: 'Advanced data structures, algorithm design, and complexity analysis.', status: 'in-progress' },
-  { code: 'CSCC01', title: 'Introduction to Software Engineering', summary: 'Full-stack development within the Agile SDLC. Focused on design patterns, Scrum methodology, and delivering scalable software in a team environment.', status: 'in-progress' },
-  { code: 'CSCB58', title: 'Computer Organization', summary: 'Low-level CPU architecture and hardware design. Experience with ARM Assembly, logic gates, and memory management to optimize system performance.', status: 'in-progress'}
+  { code: 'CSCB63', title: 'Design and Analysis of Data Structures', summary: 'Advanced data structures, algorithm design, and complexity analysis.' },
+  { code: 'CSCC01', title: 'Introduction to Software Engineering', summary: 'Full-stack development within the Agile SDLC. Focused on design patterns, Scrum methodology, and delivering scalable software in a team environment.' },
+  { code: 'CSCB58', title: 'Computer Organization', summary: 'Low-level CPU architecture and hardware design. Experience with ARM Assembly, logic gates, and memory management to optimize system performance.'}
 ];

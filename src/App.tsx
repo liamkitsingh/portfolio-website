@@ -69,15 +69,16 @@ const App: React.FC = () => {
       <section id="projects" className="scroll-section">
         <Projects />
       </section>
+      <section id="about" className="scroll-section">
+        <About />
+      </section>
       <section id="skills" className="scroll-section">
         <Skills />
       </section>
       <section id="courses" className="scroll-section">
         <Courses />
       </section>
-      <section id="about" className="scroll-section">
-        <About />
-      </section>
+      
       <section id="contact" className="scroll-section">
         <Contact />
       </section>

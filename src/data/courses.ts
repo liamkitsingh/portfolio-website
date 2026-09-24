@@ -25,5 +25,7 @@ export const courses: Course[] = [
   //Third Year
   { code: 'CSCB63', title: 'Design and Analysis of Data Structures', summary: 'Advanced data structures, algorithm design, and complexity analysis.' },
   { code: 'CSCC01', title: 'Introduction to Software Engineering', summary: 'Full-stack development within the Agile SDLC. Focused on design patterns, Scrum methodology, and delivering scalable software in a team environment.' },
-  { code: 'CSCB58', title: 'Computer Organization', summary: 'Low-level CPU architecture and hardware design. Experience with ARM Assembly, logic gates, and memory management to optimize system performance.'}
+  { code: 'CSCB58', title: 'Computer Organization', summary: 'Low-level CPU architecture and hardware design. Experience with ARM Assembly, logic gates, and memory management to optimize system performance.' },
+  { code: 'CSCC43', title: 'Introduction to Databases', summary: 'Fundamentals of relational databases, SQL, and database modeling for efficient information retrieval.' },
+  { code: 'CSCC69', title: 'Operating Systems', summary: 'Design and implementation of operating systems, including process management, memory management, and file systems.' }
 ];

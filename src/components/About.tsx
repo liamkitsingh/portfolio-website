@@ -10,16 +10,16 @@ const About: React.FC = () => {
       <>
         <p>
           Hailing from the twin islands of Trinidad and Tobago, I’m a Co-op Computer Science student at the University of Toronto, specializing in Information Systems, with a deep interest in how 
-          efficient code can solve real-world problems. I consider myself a problem solver at heart, and want to utilize my skills and efforts to make useful, impactful projects that 
+          efficient code can solve real-world problems. I consider myself a problem solver at heart, and want to utilize my skills and efforts to make useful, impactful products that 
           can make a real difference in the world.
         </p>
       </>
     ),
     interests: (
       <p>
-        Outside of coding and math, I really appreciate good fiction. I absolutely love watching movies, especially sci-fi and fantasy (PS: Project Hail Mary was amazing, and I can't wait for The Odyssey and Dune Part Three).
+        Outside of coding and math, I really appreciate good fiction. I absolutely love watching movies, especially sci-fi and fantasy (PS: Absolutely loved The Odyssey, and can't wait to see Dune Part Three!).
         In fact, my love for cinema inspired me to make a movie recommendation engine (MovieMind)!
-        When I'm not watching cinema, you can find me reading a dark fantasy book (just started Malazan: Book of the Fallen). I'm also a huge football/soccer fan,
+        When I'm not watching cinema, you can find me reading a dark fantasy book (I'm 4 books into Malazan: Book of the Fallen). I'm also a huge football/soccer fan,
         for which Liverpool is my favorite team (#YNWA).
       </p>
     ),

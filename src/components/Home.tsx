@@ -7,7 +7,7 @@ const Home: React.FC = () => {
       <Container>
         <h1>Liam Kitsingh</h1>
         <p className="lead">Software Developer | Product & Systems</p>
-        <p className="text-supporting">I'm a 4th Year Computer Science Student at University of Toronto</p>
+        <p className="text-supporting">I'm a 4th Year Computer Science Student at the University of Toronto</p>
         <p className="text-supporting">Welcome to my portfolio :)</p>
         <p>
           <Button variant="primary" href="#projects">View my projects</Button>
